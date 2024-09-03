@@ -1,0 +1,13 @@
+name: ecommerce
+
+services:
+  web:
+    build:
+      context: ..
+      dockerfile: Docker/Dockerfile
+    command: bash -c "ls -altr && pwd && python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    container_name: django-web
+    volumes:
+      - ..:/app
+    ports:
+      - "8000:8000"
