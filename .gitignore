@@ -5,6 +5,8 @@
 __pycache__
 db.sqlite3
 media
+!__init__.py
+migrations/*
 
 # Backup files # 
 *.bak
@@ -33,5 +35,4 @@ wheels/
 *.manifest 
 *.spec 
 
-*pycache*/
 env/
